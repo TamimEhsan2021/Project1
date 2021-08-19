@@ -12,20 +12,22 @@ url_stats = 'https://finance.yahoo.com/quote/{}/key.statistics?p={}'
 url_profile = 'https://finance.yahoo.com/quote/{}/profile?p={}'
 url_financial = 'https://finance.yahoo.com/quote/{}/financials?p={}'
 
-stock = 'F'
+stock = 'APPL'
 
 # response = requests.get('https://finance.yahoo.com/quote/F/financials?p=F')
 # print(url_financial.format(stock, stock))
-url = 'https://finance.yahoo.com/quote/LSEG.L'
+url = 'https://finance.yahoo.com/quote/{}'.format(stock)
 r = requests.get(url)
 print(r.status_code)
 soup = BeautifulSoup(r.text, 'html.parser')
 
 price = soup.find('div', {'class':'D(ib) Mend(20px)'}).find_all('span')[0].text
 change = soup.find('div', {'class':'D(ib) Mend(20px)'}).find_all('span')[1].text
+market_cap = soup.find('td', {'data-test':'MARKET_CAP-value'}).find_all('span')[0].text
+year_average = soup.find('td', {'data-test':'FIFTY_TWO_WK_RANGE-value'}).text
 
 print(price, change)
-
+print(market_cap, year_average)
 
 # soup = BeautifulSoup(response.text, 'html.parser')
 # pattern = re.compile(r'\s--\sData\s--\s')
