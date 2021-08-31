@@ -12,23 +12,27 @@ url_stats = 'https://finance.yahoo.com/quote/{}/key.statistics?p={}'
 url_profile = 'https://finance.yahoo.com/quote/{}/profile?p={}'
 url_financial = 'https://finance.yahoo.com/quote/{}/financials?p={}'
 
-stock = 'APPL'
+stock = 'NVDA'
 
 # response = requests.get('https://finance.yahoo.com/quote/F/financials?p=F')
 # print(url_financial.format(stock, stock))
-url = 'https://finance.yahoo.com/quote/{}'.format(stock)
+#url = 'https://uk.finance.yahoo.com/quote/{}'.format(stock)
+url ='https://uk.finance.yahoo.com/quote/TSLA?p=TSLA'
 r = requests.get(url)
 print(r.status_code)
 soup = BeautifulSoup(r.text, 'html.parser')
 
 price = soup.find('div', {'class':'D(ib) Mend(20px)'}).find_all('span')[0].text
-change = soup.find('div', {'class':'D(ib) Mend(20px)'}).find_all('span')[1].text
-market_cap = soup.find('td', {'data-test':'MARKET_CAP-value'}).find_all('span')[0].text
-year_average = soup.find('td', {'data-test':'FIFTY_TWO_WK_RANGE-value'}).text
-
-print(price, change)
-print(market_cap, year_average)
-
+print(price)
+#change = soup.find('div', {'class':'D(ib) Va(m) Maw(65%) Ov(h)'}).find_all('span')[1].text
+#market_cap = soup.find('td', {'data-test':'MARKET_CAP-value'}).find_all('span')[0].text
+#year_average = soup.find('td', {'data-test':'FIFTY_TWO_WK_RANGE-value'}).text
+#articles = soup.find('div', {'class':'Py(14px) Pos(r)'}).find_all('h3')[0].text
+#article_summary = soup.find('div', {'class':'Py(14px) Pos(r)'}).find_all('p')
+#article_author = soup.find('div', {'class':'Pos(r) Z(2) Fw(b)'}).text
+#print(price, change)
+#print(market_cap, year_average)
+#print(articles)
 # soup = BeautifulSoup(response.text, 'html.parser')
 # pattern = re.compile(r'\s--\sData\s--\s')
 # script_data = soup.find('script', text=pattern).contents[0]
