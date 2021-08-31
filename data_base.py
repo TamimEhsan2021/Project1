@@ -44,5 +44,7 @@ class SqlDB:
 
         return changed_rows_df.drop('_merge', axis=1)
 
+setup = SqlDB()
+check = setup.tableExists(table_name="stock_headlines")
 
 

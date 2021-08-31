@@ -1,2 +1,15 @@
 # Project1
-http://127.0.0.1/pgadmin4
+## Outline
+This project aims to predict stock prices through the following methods
+
+Sentiment analysis:
+- Sentiment on news headlines
+- Sentiment on tweets from twitter
+- Sentiment on Reddit feeds
+
+Stock prices:
+- Use stock historic data to evaluate current stock prices
+- Calculate the risk of a stock (how volatile a stock is)
+
+Machine learning:
+- 

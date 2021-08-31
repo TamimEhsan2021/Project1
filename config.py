@@ -10,3 +10,5 @@ config['DEFAULT'] = {'DATABASE_TYPE': '',
                      'PORT': ''}
 with open('sqlconfig.ini', 'w') as configfile:
     config.write(configfile)
+
+
