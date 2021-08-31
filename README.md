@@ -12,4 +12,4 @@ Stock prices:
 - Calculate the risk of a stock (how volatile a stock is)
 
 Machine learning:
-- 
+- Use machine learning techniques to further predict stock prices
