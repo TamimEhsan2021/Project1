@@ -15,4 +15,4 @@ Machine learning:
 - Use machine learning techniques to further predict stock prices
 
 ## TO USE
-Please add the required parameters of your pgAdmin 4 data base to the config file before runnning
+Please add the required parameters of your pgAdmin 4 data base to the config.py file before runnning
