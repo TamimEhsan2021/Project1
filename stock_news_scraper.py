@@ -2,10 +2,10 @@ from pandas import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from urllib.request import Request
-import time
-import datetime
+import time # You are not using this library
+import datetime # You are not using datetime
 import pandas as pd
-from collections import defaultdict
+from collections import defaultdict # You are not using defauldict
 from tqdm import tqdm
 
 
